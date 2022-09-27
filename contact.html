@@ -42,15 +42,15 @@
                 <fieldset>
                     <legend>Contact Information</legend>
                     <p>
-                        <label for="nameField">Your name: </label>
-                        <input id="nameField" type="text" name="customerName">
+                        <label for="nameField">*Your name: </label>
+                        <input id="nameField" type="text" required minlength="10" maxlength="75" name="customerName">
                     </p>
                     <p>
                         <label for="customerEmail">Your email: </label>
                         <input type="email" name="customerEmail" id="customerEmail">
                     </p>
                     <p><label for="customerPhone">Your phone: </label>
-                        <input type="tel" name="customerPhone" id="customerPhone"></p>
+                        <input type="tel" pattern="\(\d{3}\) \d{3}-\d{4}" name="customerPhone" id="customerPhone"></p>
                     <p>
                         <label>Phone type: </label>
                     </p>
@@ -70,7 +70,7 @@
                 <fieldset>
                     <legend>Feedback</legend>
                     <p>
-                        <textarea tabindex="1" name="feedbackText" cols="40" rows="3"></textarea>
+                        <textarea required tabindex="1" name="feedbackText" cols="40" rows="3"></textarea>
                     </p>
                     <p>
                         <label for="feedbackType">Feedback type: </label><select tabindex="2" name="feedbackType"
